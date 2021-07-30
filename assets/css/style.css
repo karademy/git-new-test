@@ -1,0 +1,233 @@
+/*@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins.woff2') format('woff2');
+    src: url('../fonts/poppins.woff') format('woff1');
+    src: url('../fonts/poppins.ttf') format('ttf');
+}*/
+
+* {
+    box-sizing: border-box;
+  }
+  html,body {
+    font: normal 100% 'Poppins', Arial, sans-serif;
+  }
+  /**Utility*/
+  .justify-content-space-between {
+    justify-content: space-between;
+  }
+  .flex-column {
+      flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+   }
+
+  /*grid */
+  .container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .container-fluid {
+    width: 100%;
+  }
+  
+  .row {
+     display: flex;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  } 
+  h1 {
+    font-size: 2.6em; 
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 2.5em; 
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 0.8753m
+  }
+  
+
+
+/* Mobile */
+@media screen and (min-width:20em)  {
+    ul {
+        list-style: none;
+        display: inline-flex;
+    }
+    .hide {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+    .close {
+        position: absolute;
+        z-index: 99;
+        top: 25px;
+        right: 5px;
+    }
+    .line {
+        border-bottom: gray solid 2px;
+        display:block;
+        width: 40px;
+        transform-origin: center;
+        transform: rotate(45deg);
+      }
+      
+      .cross {
+        transform-origin: 18px 1px;
+        transform: rotate(-45deg);
+      }
+    .sticky-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 10px;
+    }
+    .mobile-burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width:55px;
+        height: 44px;
+        padding: 10px 0px;
+        background-color: #28A745;
+        border: solid 2px #C8821B;
+        position: relative;
+        border-radius: 5px;
+    }
+    .mobile-burger-menu span {
+        border-bottom: white 2px solid;
+        width: 30px;
+        display: block;
+        margin: 0 auto;
+    
+    }
+        .sticky-header {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            height: 84px;
+        }
+        
+        .sticky-header nav .navigation {
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            flex-direction: column;
+            top:0;
+            left: 0;
+            text-align: center;
+            
+        }
+        .sticky-header nav .navigation li {
+            margin: 12px 0;
+            padding: 12px;
+        }
+        
+        .hero {
+            display: flex;
+
+            height: 208px;
+            background: url(../images/campaign-banner.jpg) center center no-repeat;
+        }
+        .hero h1, .her0 .breadcrumb {
+            text-align: center;
+            color: white;
+            margin:32px 0 16px 0;
+        }
+        .breadcrumb  {
+            margin: 0 auto;
+            background-color: #C8821B;
+        }
+        .breadcrumb ul li {
+            text-align: center;
+        }
+        .breadcrumb ul li.active {
+            color: #178430;
+        }
+        .breadcrumb ul li:nth-child(1)::before {
+            content: ">>";
+        }
+        
+        /* Grid */
+        .row {
+          flex-direction: column;
+        }
+        .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8 {
+            flex: 0 1 calc(100% - 30px);
+            width: 100%;
+
+        }
+}
+/* tablet */
+@media screen and (min-width:48em) {
+    .mobile-burger-menu {
+        
+    }
+}  
+/**Desktop*/
+@media screen and (min-width:64em) {
+  .row {
+      flex-direction: row;
+  }  
+  .col-12 {
+    flex: 0 1 auto; /*calc(100% - 30px)*/
+       width:100%
+ }
+ 
+ .col-11 {
+     flex: 0 1 auto ; /*calc(91.66666666666% - 30px)*/
+   width: 91.66666666666%;
+ }
+ 
+ .col-10 {
+     flex: 0 1  auto;
+   width: 83.333333333333%
+ 
+ }
+ .col-9 {
+     flex: 0 0 75%;
+ 
+ }
+ 
+.col-8 {
+   flex: 0 1 auto;
+   width:66.6666666666%;
+}
+ .col-6 {
+     flex: 0 1 auto;
+     width:50%;
+ }
+ .col-5 {
+      flex: 0 1 auto;
+       width: 41.6666666%;
+ }
+ .col-4 {
+   flex: 0 1 auto;
+   width:33.3333333%;
+}
+ .col-1 {
+     flex: 0 1 auto;
+     width:8.333333333%;
+ }
+
+    .sticky-header nav .navigation {
+        position: relative;
+         display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    .mobile-burger-menu {
+        display: none;
+    }
+    .close {
+        display: none;
+    }
+}
+
